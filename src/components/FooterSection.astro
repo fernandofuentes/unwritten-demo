@@ -1,0 +1,106 @@
+---
+import { 
+  FacebookIcon, 
+  InstagramIcon, 
+  TwitterIcon
+} from './icons/SocialIcons';
+---
+
+<footer class="relative bg-body text-white overflow-hidden">
+  <!-- Glowing Border -->
+  <div class="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-[#00ffff]/0 via-[#00ffff] to-[#00ffff]/0"></div>
+  
+  <!-- Main Footer Content -->
+  <div class="relative z-10 py-24 px-8 lg:px-24">
+    <!-- Grid Layout -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-16">
+      <!-- Brand Section -->
+      <div class="space-y-8">
+        <a href="/" class="font-black text-2xl lg:text-2xl inline-block">
+          <div class="flex items-center">
+            <span class="text-[#00ffff]">U</span>
+            <span>NWRITTEN</span>
+            <span class="text-[#00ffff] ml-2">A</span>
+            <span>GENCY</span>
+          </div>
+        </a>
+        <p class="text-gray-400 max-w-md">
+          Breaking conventions and rewriting the rules of digital marketing. 
+          Based in The Woodlands, TX, serving visionaries worldwide.
+        </p>
+        <div class="flex gap-6">
+          <a href="https://facebook.com" class="text-gray-400 hover:text-[#00ffff] transition-colors duration-300">
+            <FacebookIcon className="w-6 h-6" />
+          </a>
+          <a href="https://instagram.com" class="text-gray-400 hover:text-[#00ffff] transition-colors duration-300">
+            <InstagramIcon className="w-6 h-6" />
+          </a>
+          <a href="https://x.com" class="text-gray-400 hover:text-[#00ffff] transition-colors duration-300">
+            <TwitterIcon className="w-6 h-6" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="grid grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-[#00ffff] font-bold mb-6 uppercase tracking-wider">Services</h3>
+          <ul class="space-y-4">
+            <li><a href="/branding-and-identity" class="text-gray-400 hover:text-white transition-colors duration-300">Branding & Identity</a></li>
+            <li><a href="/web-design-and-development" class="text-gray-400 hover:text-white transition-colors duration-300">Web Design & Development</a></li>
+            <li><a href="/digital-advertising-and-strategy" class="text-gray-400 hover:text-white transition-colors duration-300">Digital Advertising & Strategy</a></li>
+            <li><a href="/social-media-and-content" class="text-gray-400 hover:text-white transition-colors duration-300">Social Media & Content</a></li>
+            <li><a href="/consulting-and-growth" class="text-gray-400 hover:text-white transition-colors duration-300">Consulting & Growth</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-[#00ffff] font-bold mb-6 uppercase tracking-wider">Company</h3>
+          <ul class="space-y-4">
+            <li><a href="/" class="text-gray-400 hover:text-white transition-colors duration-300">Home</a></li>
+            <li><a href="/about" class="text-gray-400 hover:text-white transition-colors duration-300">About</a></li>
+            <li><a href="/services" class="text-gray-400 hover:text-white transition-colors duration-300">Services</a></li>
+            <li><a href="/contact" class="text-gray-400 hover:text-white transition-colors duration-300">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="space-y-8">
+        <h3 class="text-[#00ffff] font-bold uppercase tracking-wider">Get In Touch</h3>
+        <div class="space-y-4">
+          <a href="tel:+1234567890" class="block text-gray-400 hover:text-white transition-colors duration-300">
+            <span class="text-[#00ffff]">T:</span> +1 (234) 567-890
+          </a>
+          <a href="mailto:hello@unwrittenagency.com" class="block text-gray-400 hover:text-white transition-colors duration-300">
+            <span class="text-[#00ffff]">E:</span> hello@unwrittenagency.com
+          </a>
+          <p class="text-gray-400">
+            <span class="text-[#00ffff]">A:</span> The Woodlands, TX
+          </p>
+        </div>
+        <a 
+          href="/contact" 
+          class="inline-block px-8 py-3 bg-[#00ffff] text-body font-bold rounded hover:bg-opacity-80 transition-colors uppercase"
+        >
+          Let's Talk
+        </a>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="mt-20 pt-8 border-t border-white/10">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-gray-400 text-sm">
+          © {new Date().getFullYear()} Unwritten Agency. All rights reserved.
+        </p>
+        <div class="flex gap-8">
+          <a href="/privacy" class="text-gray-400 hover:text-white text-sm transition-colors duration-300">Privacy Policy</a>
+          <a href="/terms" class="text-gray-400 hover:text-white text-sm transition-colors duration-300">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Background Gradient -->
+  <div class="absolute inset-0 bg-gradient-to-t from-[#00ffff]/5 to-transparent pointer-events-none"></div>
+</footer>

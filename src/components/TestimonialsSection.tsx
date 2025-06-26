@@ -1,0 +1,174 @@
+import React from 'react';
+
+interface Testimonial {
+  name: string;
+  role: string;
+  quote: string;
+  image: string;
+  isError?: boolean;
+  isCode?: boolean;
+  isSiri?: boolean;
+}
+
+const testimonials: Testimonial[] = [
+  {
+    name: "Donald Trump",
+    role: "45th President of the United States",
+    quote: "Unwritten Agency made my brand huge—they made me billions and billions and billions.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg"
+  },
+  {
+    name: "Kate Upton",
+    role: "Supermodel & Actress",
+    quote: "Unwritten Agency made my brand hotter than my latest shoot!",
+    image: "https://cos.h-cdn.co/assets/16/23/480x480/square-1465562545-kate-upton-lead.jpg"
+  },
+  {
+    name: "Barack Obama",
+    role: "44th President of the United States",
+    quote: "My girlfriend Jennifer and I love Unwritten Agency <3",
+    image: "https://upload.wikimedia.org/wikipedia/commons/8/8d/President_Barack_Obama.jpg"
+  },
+  {
+    name: "Siri",
+    role: "AI Assistant, Apple Inc.",
+    quote: "Even I have to admit—Unwritten Agency is simply outstanding.",
+    isSiri: true,
+    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&h=400&fit=crop&q=80"
+  },
+  {
+    name: "Alexandria Ocasio-Cortez",
+    role: "U.S. Representative",
+    quote: "Unwritten Agency made my brand as revolutionary as my ideas!",
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/4a/Alexandria_Ocasio-Cortez_Official_Portrait.jpg"
+  },
+  {
+    name: "Luigi Mangione",
+    role: "McDonalds Fan Boy",
+    quote: "Who's the CEO of Unwritten Agency?",
+    image: "https://www.indy100.com/media-library/luigi-mangione-retains-high-powered-ny-attorney.jpg?id=55353063"
+  },
+  {
+    name: "Kevin Hart",
+    role: "Comedian & Actor",
+    quote: "My brand was small-time—Unwritten Agency made it big-time, like my jokes!",
+    image: "https://www.routemagazine.us/assets/stories/kevin-hart-001.png"
+  },
+  {
+    name: "Oprah Winfrey",
+    role: "Media Executive & Talk Show Host",
+    quote: "You get a brand! You get a brand! Unwritten Agency handed me the best one yet!",
+    image: "https://upload.wikimedia.org/wikipedia/commons/b/bf/Oprah_in_2014.jpg"
+  },
+  {
+    name: "Gordon Ramsay",
+    role: "Celebrity Chef & TV Personality",
+    quote: "My brand was raw—Unwritten Agency cooked it to bloody perfection!",
+    image: "https://upload.wikimedia.org/wikipedia/commons/6/6f/Gordon_Ramsay.jpg"
+  },
+  {
+    name: "Ellen DeGeneres",
+    role: "Comedian & TV Host",
+    quote: "Unwritten Agency turned my brand into a non-stop laugh fest—so fun, I almost danced!",
+    image: "https://upload.wikimedia.org/wikipedia/commons/b/b8/Ellen_DeGeneres_2011.jpg"
+  },
+  {
+    name: "Snoop Dogg",
+    role: "Rapper & Entrepreneur",
+    quote: "Unwritten Agency got my brand so fly, it's smoother than my freshest beat!",
+    image: "https://upload.wikimedia.org/wikipedia/commons/1/17/Snoop_Dogg_2019_by_Glenn_Francis.jpg"
+  },
+  {
+    name: "Stephen Colbert",
+    role: "TV Host & Comedian",
+    quote: "They took my brand from 'meh' to 'megawatt'—talk about an upgrade!",
+    image: "https://variety.com/wp-content/uploads/2021/10/stephencolbertoct2021.jpg"
+  },
+  {
+    name: "Ryan Reynolds",
+    role: "Actor & Entrepreneur",
+    quote: "My brand's now as charming and witty as a superhero rom-com—Unwritten Agency nailed it!",
+    image: "https://upload.wikimedia.org/wikipedia/commons/1/14/Deadpool_2_Japan_Premiere_Red_Carpet_Ryan_Reynolds_%28cropped%29.jpg"
+  },
+  {
+    name: "Michael Scott",
+    role: "Regional Manager at Dunder Mifflin",
+    quote: "You left me satisfied and smiling. That’s what she said!",
+    image: "https://www.nbc.com/sites/nbcblog/files/2022/07/the-office-how-to-watch.jpg"
+  },
+  {
+    name: "Dwight Schruten",
+    role: "Assistant to the Regional Manager",
+    quote: "Unwritten Agency is like a beet farm for brands— they cultivate, nurture, and make your brand grow into something unstoppable. Fact.",
+    image: "https://i1.sndcdn.com/artworks-cCAp4If23Xcia756-gKI5Pw-t500x500.jpg"
+  }
+];
+
+export default function TestimonialsSection() {
+  return (
+    <section className="py-24 bg-body overflow-hidden relative">
+      <div className="relative z-10 px-4 lg:px-0 lg:mx-[8%]">
+        <h2 className="text-section font-black text-white uppercase mb-4 text-center">
+          Reviews
+        </h2>
+        <p className="text-gray-300 text-center mb-16">
+          Not convinced? Check out what these people said:
+        </p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {testimonials.map((testimonial, index) => (
+            <div 
+              key={index}
+              className={`group backdrop-blur-sm rounded-lg p-6 transition-all duration-500 relative overflow-hidden
+                ${testimonial.isSiri
+                  ? 'bg-purple-500/5 border border-purple-500/30 hover:border-purple-500/50'
+                  : 'bg-white/5 border border-[#00ffff]/10 hover:border-[#00ffff]/30'}`}
+            >
+              {/* Glow Effect */}
+              <div className={`absolute inset-0 bg-gradient-to-r opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500
+                ${testimonial.isSiri
+                  ? 'from-purple-500/0 via-purple-500/5 to-purple-500/0'
+                  : 'from-[#00ffff]/0 via-[#00ffff]/5 to-[#00ffff]/0'}`} 
+              />
+              
+              {/* Content */}
+              <div className="relative z-10 flex flex-col h-full">
+                {/* Quote */}
+                <p className={`flex-grow mb-6 ${testimonial.isSiri
+                  ? 'text-purple-300 text-base italic'
+                  : 'text-gray-300 text-base'}`}>
+                  "{testimonial.quote}"
+                </p>
+
+                {/* Author Info with Image */}
+                <div className="flex items-center gap-4 pt-6 border-t border-white/10">
+                  <div className={`w-12 h-12 rounded-full overflow-hidden ring-2 transition-all duration-300 group-hover:scale-105
+                    ${testimonial.isSiri
+                      ? 'ring-purple-500/20'
+                      : 'ring-[#00ffff]/20'}`}>
+                    <img 
+                      src={testimonial.image} 
+                      alt={testimonial.name}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div>
+                    <h3 className={`font-bold text-sm ${
+                      testimonial.isSiri
+                        ? 'text-purple-400'
+                        : 'text-[#00ffff]'
+                    }`}>
+                      {testimonial.name}
+                    </h3>
+                    <p className="text-gray-400 text-xs">{testimonial.role}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

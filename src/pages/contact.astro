@@ -1,0 +1,43 @@
+---
+// Layout Components
+import GalaxyParticles from "../components/GalaxyParticles";
+import GlitchTransition from "../components/GlitchTransition";
+import Navigation from "../components/Navigation";
+import ContactPageHeroSection from "../components/ContactPageHeroSection.astro";
+import ContactPageAboutSection from "../components/ContactPageAboutSection";
+import TestimonialsSection from '../components/TestimonialsSection';
+import SpaceAmbiance from "../components/SpaceAmbiance";
+import Footer from "../components/FooterSection.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Contact Us - UNWRITTEN Digital Agency</title>
+  </head>
+  <body class="font-poppins text-base text-body">
+    <SpaceAmbiance client:load />
+    <header class="min-h-screen bg-body relative">
+      <Navigation client:load />
+      <GalaxyParticles client:load />
+      <div class="pt-[96px]">
+        <div class="px-4 lg:px-0 md:mx-[8%] lg:mx-[16%] relative">
+          <ContactPageHeroSection />
+        </div>
+      </div>
+    </header>
+
+    <GlitchTransition client:load />
+
+    <ContactPageAboutSection client:load />
+		<TestimonialsSection client:load />
+    <Footer />
+  </body>
+</html>

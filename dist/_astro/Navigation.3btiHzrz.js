@@ -1,0 +1,23 @@
+import{j as e}from"./jsx-runtime.BCPyM5IQ.js";import{r as s}from"./index.OztxiM9T.js";function v(){const[n,l]=s.useState(!1),[m,i]=s.useState(!1),[c,h]=s.useState("/"),p=s.useRef(null),d=s.useRef(null),f=[{name:"Home",path:"/"},{name:"Services",path:"/services",dropdown:[{name:"Branding & Identity",path:"/branding-and-identity"},{name:"Web Design & Development",path:"/web-design-and-development"},{name:"Digital Advertising & Strategy",path:"/digital-advertising-and-strategy"},{name:"Social Media & Content",path:"/social-media-and-content"},{name:"Consulting & Growth",path:"/consulting-and-growth"}]},{name:"About",path:"/about"},{name:"Contact Us",path:"/contact"}];s.useEffect(()=>{h(window.location.pathname)},[]);const x=()=>{l(!n)};s.useEffect(()=>{const t=a=>{d.current&&!d.current.contains(a.target)&&i(!1)};return document.addEventListener("mousedown",t),()=>{document.removeEventListener("mousedown",t)}},[]);const r=t=>t==="/"?c===t:c.startsWith(t),u=()=>f[1].dropdown?.some(t=>c.startsWith(t.path));return e.jsxs("nav",{ref:p,className:"fixed top-0 left-0 right-0 z-50 py-8",children:[e.jsxs("div",{className:"flex justify-between items-center px-12",children:[e.jsx("a",{href:"/",className:"font-black overflow-hidden relative text-xl lg:text-2xl text-white transition-colors duration-300",children:e.jsxs("div",{className:"flex items-center",children:[e.jsx("span",{className:"letter-rotate inline-block transform",children:"U"}),e.jsx("span",{className:"letter-hidden inline-block",children:"NWRITTEN "}),e.jsx("span",{className:"letter-rotate inline-block transform",children:"A"}),e.jsx("span",{className:"letter-hidden inline-block",children:"GENCY"})]})}),e.jsx("div",{className:"hidden lg:flex gap-8",children:f.map(t=>t.dropdown?e.jsxs("div",{ref:d,className:"relative group",children:[e.jsxs("button",{onClick:()=>i(!m),className:"relative text-white transition-colors duration-300 font-normal",children:[t.name,e.jsx("span",{className:`absolute -bottom-1 left-0 h-[2px] bg-[#00ffff] transition-all duration-300 ${u()?"w-full":"w-0 group-hover:w-full"}`})]}),m&&e.jsx("div",{className:"absolute top-full left-0 mt-2 w-64 bg-[#0d0d0d] border border-[#00ffff]/20 rounded-lg shadow-xl",children:t.dropdown.map(a=>e.jsx("a",{href:a.path,className:`block px-4 py-3 text-white hover:bg-[#00ffff]/10 transition-colors duration-300 ${r(a.path)?"bg-[#00ffff]/10":""}`,onClick:()=>i(!1),children:a.name},a.name))})]},t.name):e.jsxs("a",{href:t.path,className:"relative group text-white transition-colors duration-300 font-normal",children:[t.name,e.jsx("span",{className:`absolute -bottom-1 left-0 h-[2px] bg-[#00ffff] transition-all duration-300 ${r(t.path)?"w-full":"w-0 group-hover:w-full"}`})]},t.name))}),e.jsxs("button",{onClick:x,className:"lg:hidden flex flex-col justify-center items-center gap-1.5 w-8 h-8 text-white z-[60]","aria-label":"Toggle menu",children:[e.jsx("span",{className:`w-6 h-1 bg-white transition-all duration-300 transform ${n?"rotate-45 translate-y-[7px]":""}`}),e.jsx("span",{className:`w-6 h-1 bg-white transition-all duration-300 ${n?"opacity-0":""}`}),e.jsx("span",{className:`w-6 h-1 bg-white transition-all duration-300 transform ${n?"-rotate-45 -translate-y-[7px]":""}`})]}),e.jsx("div",{className:`fixed top-0 right-0 w-1/2 h-screen bg-[#00ffff] transform transition-all duration-300 shadow-2xl z-50 ${n?"translate-x-0 opacity-100":"translate-x-full opacity-0 pointer-events-none"}`,children:e.jsx("div",{className:"h-full flex flex-col justify-center px-16",children:f.map((t,a)=>t.dropdown?e.jsxs("div",{className:"py-4",children:[e.jsx("div",{className:"text-2xl font-bold text-body mb-2",children:t.name}),e.jsx("div",{className:"pl-4",children:t.dropdown.map(o=>e.jsx("a",{href:o.path,className:`block py-2 text-lg text-body/70 hover:text-body transition-colors duration-300 ${r(o.path)?"text-body":""}`,onClick:()=>l(!1),children:o.name},o.name))})]},t.name):e.jsx("a",{href:t.path,className:`block py-4 text-2xl font-bold text-body hover:text-body/70 transition-colors duration-300 transform ${n?"translate-x-0 opacity-100":"translate-x-[50px] opacity-0"} ${r(t.path)?"text-body":"text-body/70"}`,style:{transitionDelay:n?`${a*.1}s`:"0s"},onClick:()=>l(!1),children:t.name},t.name))})})]}),e.jsx("style",{children:`
+        @keyframes slideIn {
+          from {
+            transform: translateX(100%);
+            opacity: 0;
+          }
+          to {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+
+        @keyframes slideOut {
+          from {
+            transform: translateX(0);
+            opacity: 1;
+          }
+          to {
+            transform: translateX(100%);
+            opacity: 0;
+          }
+        }
+      `})]})}export{v as default};
